@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Contracts\Database\InterfacesRepositories\**" />
+    <Compile Remove="Contracts\ToApi\**" />
+    <EmbeddedResource Remove="Contracts\Database\InterfacesRepositories\**" />
+    <EmbeddedResource Remove="Contracts\ToApi\**" />
+    <None Remove="Contracts\Database\InterfacesRepositories\**" />
+    <None Remove="Contracts\ToApi\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InfoPortal.Domains\InfoPortal.Domains.csproj" />
+  </ItemGroup>
+
+</Project>
